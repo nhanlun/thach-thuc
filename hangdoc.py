@@ -5,10 +5,12 @@ import os
 def main():
     random.seed()
 
-    df = pd.read_csv("data.csv", dtype=str)
-
-    keywords = df['Keyword'].dropna().values.tolist()
-
+    try:
+        df = pd.read_csv("data.csv", dtype=str, encoding='latin-1')
+        keywords = df['Keyword'].dropna().values.tolist()
+    except:
+        df = pd.read_csv("word list.csv", dtype=str, encoding='latin-1')
+        keywords = df['Key word'].dropna().values.tolist()
     keywords = list(set(keywords))
 
     keywords = ["".join(s.split()).upper() for s in keywords]
@@ -30,6 +32,7 @@ def main():
         
         while True:
             os.system("cls")
+            os.system("clear")
             for i in range(n):
                 print(str(i + 1).rjust(3, ' '), end='')
             print()
