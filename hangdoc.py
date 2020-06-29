@@ -30,6 +30,8 @@ def main():
         
         hidden_positions = list(range(len(word)))
         
+        cnt = 0
+
         while True:
             os.system("cls")
             os.system("clear")
@@ -48,7 +50,12 @@ def main():
                 print(word)
                 return
             elif user_input in ['HINT', 'h', 'H', '']:
-                idx = random.choice(hidden_positions)
+                cnt += 1
+                if cnt % 3 == 0:
+                    idx = int(input('Enter index: '))
+                    idx -= 1
+                else:
+                    idx = random.choice(hidden_positions)
                 hidden_positions.remove(idx)
             elif user_input in ['NEXT', 'n', 'N']:
                 break
