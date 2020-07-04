@@ -2,7 +2,7 @@
 
 using namespace std;
 
-const string mess = "|_/=\\^'y |)@^n {_a`[\\/] g0^'[";
+// const string mess = "|_/=\\^'y |)@^n {_a`[\\/] g0^'[";
 
 const int n = mess.size();
 
@@ -10,6 +10,9 @@ int k = 179;
 
 int main()
 {
+    freopen("message.txt", "r", stdin);
+    string mess;
+    cin >> mess;
     cout << "k = " << k << '\n';
     cout << mess << "\n";
     cout << "len = " << mess.size() << '\n';

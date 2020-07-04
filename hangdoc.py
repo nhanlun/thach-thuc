@@ -19,7 +19,7 @@ def main():
 
     df = pd.DataFrame({'Keyword': keywords})
 
-    df.to_csv("data.csv", index=False)
+    # df.to_csv("data.csv", index=False)
     
     print("Number of keywords: ", len(keywords))
 
