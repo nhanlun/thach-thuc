@@ -4,15 +4,19 @@ using namespace std;
 
 // const string mess = "|_/=\\^'y |)@^n {_a`[\\/] g0^'[";
 
-const int n = mess.size();
+// const int n = mess.size();
 
-int k = 179;
+// int k = 179;
 
 int main()
 {
     freopen("message.txt", "r", stdin);
-    string mess;
-    cin >> mess;
+   // freopen("output.txt",)
+    string mess; int k;
+    // cin >> mess;
+    getline(cin, mess);
+    cin >> k;
+    int n = mess.length();
     cout << "k = " << k << '\n';
     cout << mess << "\n";
     cout << "len = " << mess.size() << '\n';
