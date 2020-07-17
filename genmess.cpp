@@ -35,6 +35,10 @@ int main()
         }
         x += 32;
         cout << x;
+        if (i % 80 == 75) 
+            cout << '\n';
+        else if (i % 20 == 15)
+            cout << ' ';
     }
     cout << "END";
     return 0;
